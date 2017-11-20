@@ -42,32 +42,7 @@ align-items:center;
     height:80px;
     background-size: 80px;
 }
-.icon-share
-{
-    position:relative;
-    background: url(icon-share.svg);
-    background-repeat: no-repeat;
-    width:60px;
-    height:60px;
-    padding:3px;
-    background-size: 60px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background .4s, color .5s;
-    z-index:1;
-    
-}
-.icon-share:hover
-{
-    background-color: rgba(81, 1, 25, 0.8);
-    transition: background .4s, color .5s;
 
-}
-.icon-share:active
-{
-    transition: box-shadow .3s;
-}
 .nav-social{
     position: fixed;
     right:15px;
@@ -93,25 +68,22 @@ ul li:nth-child(3) {
 ul li:nth-child(4) {
     transform: translate( -35px, -80px);
 }
+ul li:nth-child(5) {
+    transform: translate( -35px, -80px);
+}
     
     ul li {
         position: absolute;
         display: block;
-        width: 60px;
-        height: 60px;
         background: rgba(0, 0, 0, 0.8);
         border-radius: 50%;
         cursor: pointer;
         pointer-events: auto;
         cursor: pointer;
         text-align: center;
-        font-size: 1em;
-        line-height: 67px;
         transition: transform .5s ease-in-out;
     } 
         ul li a {
-           
-            font-size: 1.5em;
             pointer-events: none;
             transition: color .2s ease-in-out;
             text-decoration: none;
@@ -131,16 +103,19 @@ ul li:nth-child(4) {
             
         }
 .active ul li:nth-child(1) {
-    transform: translate(-180px,-50px);
+    transform: translate(-35px,-170px);
 }
 .active ul li:nth-child(2) {
-    transform: translate( -145px, -120px);
+    transform: translate( -35px, -245px);
 }
 .active ul li:nth-child(3) {
-    transform: translate(-95px ,-190px);
+    transform: translate(-35px ,-320px);
 }
 .active ul li:nth-child(4) {
-    transform: translate(-30px, -235px);
+    transform: translate(-35px, -395px);
+}
+.active ul li:nth-child(5) {
+    transform: translate(-35px, -470px);
 }
 
     
@@ -153,8 +128,6 @@ ul li:nth-child(4) {
     }
 
     .active ul li a {
-        
-         font-size: 1.5em;
          pointer-events: none;
          transition: color .2s ease-in-out;
          text-decoration: none;
@@ -165,12 +138,51 @@ ul li:nth-child(4) {
         transition: background .4s, color .5s;
     }
     div[class^="icon-"]{
-        width:60px;
-        height:60px;
+        width:70px;
+        height:70px;
         background-size: 60px;
         background-repeat: no-repeat;
-
+        background-position:center;
      }
+
+     div[class^="i-"]{
+        padding:3px;
+        background-size: 60px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background .4s, color .5s;
+        z-index:1;
+        background-position:center;
+        width:70px;
+        height:70px;
+        background-repeat: no-repeat;
+     }
+
+     .i-share
+     {
+        position:relative;
+         background: url(icon-share.svg);
+     }
+     .i-about
+     {
+        position:fixed;
+         background: url(about.svg);
+         left:15px;
+         bottom:30px;
+     }
+     div[class^="i-"]:hover
+     {
+         background-color: rgba(81, 1, 25, 0.8);
+         transition: background .4s, color .5s;
+     
+     }
+     div[class^="i-"]:active
+     {
+         transition: box-shadow .3s;
+     }
+
+     
    
      .icon-ln
      {
@@ -188,6 +200,10 @@ ul li:nth-child(4) {
      .icon-cp
      {
         background: url(codepen.svg);
+     }
+     .icon-em
+     {
+        background: url(mail.svg);
      }
      
      .content-center{
@@ -207,6 +223,62 @@ ul li:nth-child(4) {
         font-size: 3em;
         opacity:1;
      }
-     
 
+
+     
+     /* Tooltip text */
+.tooltip .tooltiptext {
+   visibility: hidden;
+    width: 120px;
+font-size:1.2em;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+ 
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    right: 105%; 
+    margin-left: -60px;
+    top:40%;
+   
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext-r {
+    visibility: hidden;
+     width: 120px;
+     font-size:1.2em;
+     color: #fff;
+     text-align: center;
+     background-color: rgba(0, 0, 0, 0.6);
+     border-radius: 6px;
+
+ 
+     /* Position the tooltip text */
+     position: absolute;
+     z-index: 1;
+     left: 105%; 
+     top:40%;
+    
+     /* Fade in tooltip */
+     opacity: 0;
+     transition: opacity 1s;
+ }
+
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.tooltip:hover .tooltiptext-r {
+    visibility: visible;
+    opacity: 1;
+}
 

@@ -28,7 +28,7 @@ lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
 lFollowY = (10 * lMouseY) / 100;
 
 });
-$('.icon-share').click(function() {
+$('.i-share').click(function() {
     $('.nav-social').toggleClass('active');
 });
 
@@ -44,3 +44,4 @@ new Typed('.hello', {
 animate();
 
 });
+
