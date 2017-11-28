@@ -1,0 +1,235 @@
+
+* {
+    box-sizing: border-box;
+  }
+html, body {
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin:0;
+  }
+  body{
+      position:relative;
+      font-family:arial;
+      color: #FFFFFF;
+      overflow:hidden;
+      background-color:#4B4B4B;
+      overflow-y: auto;
+  }
+
+.header
+{
+  position:relative;
+    background-color: rgb(90, 4, 4);
+    width:100%;
+    padding:2%;
+    display: table;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .section {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .section::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: rgb(90, 4, 4);
+    border: 4px solid rgb(51, 51, 51);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+
+  /* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid black;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent black;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid black;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent black transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: black;
+    position: relative;
+    border-radius: 6px;
+  }
+
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+@media all and (max-width: 600px) {
+    /* Place the timelime to the left */
+      .timeline::after {
+        left: 31px;
+      }
+    
+    /* Full-width containers */
+      .section {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+    
+    /* Make sure that all arrows are pointing leftwards */
+      .section::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+    
+    /* Make sure all circles are at the same spot */
+      .left::after, .right::after {
+        left: 15px;
+      }
+    
+    /* Make all right containers behave like the left ones */
+      .right {
+        left: 0%;
+      }
+    }
+
+
+
+
+    .scrolling-animation{
+      position:fixed;
+      bottom:10px;
+      left:46%;
+      width:100px;
+      height:100px;
+      border-radius:1000px;
+      background-color: black;
+      z-index:3
+    }
+    #svg-animation{
+     margin-left:30px;
+     margin-top:15px;
+    width:40px;
+    }
+
+    #rect1, #rect2 {
+      animation: scroll 3s infinite linear;
+      opacity:0;
+    }
+    
+    #rect2{
+      animation-delay: 1s;
+    }
+    #rect3{
+      animation-delay: 2s;
+    }
+    
+    @keyframes scroll {
+      0% {
+        cy: 4;
+        opacity: 0;
+      }
+      45%, 55% {
+        opacity: 1;
+        cy: 9;
+      }
+      100% {
+        cy: 14;
+        opacity: 0;
+      }
+    }
+    .logo{
+      position:absolute;
+      left:15px;
+      top:15px;
+      background: url('guilherme-logo.svg');
+      width:80px;
+      height:80px;
+      background-size: 80px;
+  }
+  .header-right{
+    position:relative;
+    left:100px;
+   
+  }
+  .header-bottom-part{
+    display:table;
+    position:relative;
+    top:20px;
+  }
+
+  .content-header{
+    display: table-cell;
+    height:100px;
+    vertical-align: middle;
+    padding:20px;
+    text-align:justify;
+  }
+
+  .personal-image{
+    position:relative;
+    background-image: url('guilherme-lourenco.jpg');
+    background-size: cover;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+  }

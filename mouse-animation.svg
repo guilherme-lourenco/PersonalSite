@@ -1,0 +1,19 @@
+<svg
+   width="60px"
+   viewBox="0 0 14.334 24.75"
+   >
+   <rect
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:38.11653519;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect1"
+     width="1.7291067"
+     height="8.4726229"
+     x="6.3024468"
+     y="5.2110953" />
+  <path
+     fill="transparent"
+     d="M7.167,0.5C3.485,0.5,0.5,3.485,0.5,7.167v10.416                   c0,3.682,2.985,6.667,6.667,6.667s6.667-2.985,6.667-6.667V7.167C13.834,3.485,10.849,0.5,7.167,0.5z"
+     id="path6"
+     stroke="white"
+     style="fill:none;stroke:#ffffff" />
+
+</svg>
